@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Webpage</title>
-    <style>
-        body{
-            text-align: center;
-            font-family: sans-serif;
-        }
-        button{
-            background-color: bisque;
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(42, 42, 42);
-        }
-    </style>
+    <title>SpamGuard Classifier</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+    <button id="dark-mode-toggle" style="position: fixed; top: 20px; right: 20px;">Toggle Dark Mode</button>
     <h1>SpamGuard Classifier</h1>
     <form method="post" action="/predict">
-        <textarea rows="15" cols="35" name="content" placeholder="enter you mail body here"
-        autocomplete="off" >{{ email }}</textarea>
+        <textarea rows="15" cols="35" name="content" placeholder="Enter your email content here" autocomplete="off">{{ email_text }}</textarea>
         <div>
-            <button>Check Spam</button>
+            <button type="submit">Check Spam</button>
             <a href="/">Reset</a>
         </div>
-        
     </form>
     {% if predictions == 1 %}
-        <h2 style="color: red">Spam</h2>
+        <h2 class="red">Spam</h2>
     {% elif predictions == -1 %}
-        <h2 style="color: green;">Ham</h2>
+        <h2 class="green">Ham</h2>
     {% endif %}
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/ahmed-alghali-4997a5229/" target="_blank">LinkedIn</a></p>
+    </footer>
+    <script>
+        // Dark mode toggle script
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
 </body>
 </html>

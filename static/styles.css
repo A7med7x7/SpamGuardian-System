@@ -1,0 +1,157 @@
+/* Link to Google Fonts for Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Base styles */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Header styles */
+h1 {
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Form styles */
+form {
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Textarea styles */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+    margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Button styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Link styles */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1em;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+a:hover {
+    border: 2px solid #4CAF50;
+}
+
+/* Heading styles */
+h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+h2.green {
+    color: #28a745;
+}
+
+h2.red {
+    color: #dc3545;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+body.dark-mode form {
+    background-color: #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode textarea {
+    border: 1px solid #555;
+    background-color: #666;
+    color: #f5f5f5;
+}
+
+body.dark-mode button {
+    background-color: #555;
+    color: #f5f5f5;
+}
+
+body.dark-mode button:hover {
+    background-color: #666;
+}
+
+body.dark-mode a {
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+}
+
+body.dark-mode a:hover {
+    border: 2px solid #4CAF50;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #4CAF50;
+}
+
+footer button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 0.8em;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+footer button:hover {
+    background-color: #45a049;
+}
