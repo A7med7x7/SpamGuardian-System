@@ -14,6 +14,7 @@ cryptography @ file:///croot/cryptography_1714660666131/work
 distro @ file:///croot/distro_1714488253808/work
 Flask==3.0.3
 frozendict @ file:///croot/frozendict_1713194832637/work
+gunicorn==22.0.0
 idna @ file:///croot/idna_1714398848350/work
 itsdangerous==2.2.0
 Jinja2==3.1.4
