@@ -16,14 +16,15 @@
 </head>
 <body>
     <h1>SpamGuard Classifier</h1>
-    <form method="post">
-        <textarea name="email-content" placeholder="enter you mail body here" rows="15" cols="35">{{ text }}</textarea>
+    <form method="post" action="/predict">
+        <textarea rows="15" cols="35" name="content" placeholder="enter you mail body here"
+        autocomplete="off" >{{ email }}</textarea>
         <div>
             <button>Check Spam</button>
             <a href="/">Reset</a>
         </div>
         
     </form>
-    <h2>{{ text }}</h2>
+    <h2>{{ predictions }}</h2>
 </body>
 </html>
