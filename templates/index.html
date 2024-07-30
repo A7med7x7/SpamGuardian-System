@@ -25,6 +25,10 @@
         </div>
         
     </form>
-    <h2>{{ predictions }}</h2>
+    {% if predictions == 1 %}
+        <h2 style="color: red">Spam</h2>
+    {% elif predictions == -1 %}
+        <h2 style="color: green;">Ham</h2>
+    {% endif %}
 </body>
 </html>
