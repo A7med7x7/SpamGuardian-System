@@ -1,0 +1,80 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def home():\n    return render_template('index.html')\n@app.route(\"/predict\", methods=[\"POST\"])\ndef predict():\n    #if request.method == 'POST':\n    email = request.form.get(\"content\")\n    tokenized_email = tokenizer.transform([email])\n    predictions = model.predict(tokenized_email)\n    predictions = 1 if predictions == 1 else -1\n    return render_template('index.html', predictions=predictions, email_text=email)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "predict",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def predict():\n    #if request.method == 'POST':\n    email = request.form.get(\"content\")\n    tokenized_email = tokenizer.transform([email])\n    predictions = model.predict(tokenized_email)\n    predictions = 1 if predictions == 1 else -1\n    return render_template('index.html', predictions=predictions, email_text=email)\nif __name__ == \"__main__\": \n    app.run(debug=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "tokenizer = pickle.load(open('models/cv.pkl', 'rb'))\nmodel = pickle.load(open('models/clf.pkl', 'rb'))\napp = Flask(__name__)\n@app.route(\"/\")\ndef home():\n    return render_template('index.html')\n@app.route(\"/predict\", methods=[\"POST\"])\ndef predict():\n    #if request.method == 'POST':\n    email = request.form.get(\"content\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "model = pickle.load(open('models/clf.pkl', 'rb'))\napp = Flask(__name__)\n@app.route(\"/\")\ndef home():\n    return render_template('index.html')\n@app.route(\"/predict\", methods=[\"POST\"])\ndef predict():\n    #if request.method == 'POST':\n    email = request.form.get(\"content\")\n    tokenized_email = tokenizer.transform([email])",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\n@app.route(\"/\")\ndef home():\n    return render_template('index.html')\n@app.route(\"/predict\", methods=[\"POST\"])\ndef predict():\n    #if request.method == 'POST':\n    email = request.form.get(\"content\")\n    tokenized_email = tokenizer.transform([email])\n    predictions = model.predict(tokenized_email)",
+        "detail": "app",
+        "documentation": {}
+    }
+]
